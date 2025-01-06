@@ -1,0 +1,7 @@
+start:
+  args:
+    - firehose
+  flags:
+    common-first-streamable-block: 309000000
+    common-live-blocks-addr: localhost:10014
+    advertise-chain-name: solana-localnet

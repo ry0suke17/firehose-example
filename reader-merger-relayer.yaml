@@ -1,0 +1,15 @@
+start:
+  args:
+    - reader-node
+    - merger
+    - relayer
+  flags:
+    common-first-streamable-block: 309000000
+    merger-time-between-store-lookups: 10s
+    reader-node-path: firesol
+    reader-node-arguments: |
+      fetch rpc 309000000
+      --state-dir "{node-data-dir}/poller/states"
+      --interval-between-fetch=3s
+      --block-fetch-batch-size=1
+      --endpoints=https://api.mainnet-beta.solana.com
